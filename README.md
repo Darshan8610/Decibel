@@ -39,6 +39,71 @@
 
 ---
 
+## 📱 APK Download & Installation Guide
+
+### 1. Download Pre-built APKs
+You can get the latest official APK builds from the [**GitHub Releases**](https://github.com/Darshan8610/Decibel/releases) tab.
+
+| APK Variant | Recommended For | Description |
+| :--- | :--- | :--- |
+| **`Decibel-v1.0.0-arm64-v8a.apk`** | Modern Android Devices | Optimized for 64-bit ARM devices (smaller download size ~30 MB & better performance). |
+| **`Decibel-v1.0.0-Universal.apk`** | All Android Devices & Emulators | Includes all CPU architectures (arm64-v8a, armeabi-v7a, x86, x86_64 ~57 MB). |
+
+### 2. How to Install on Android
+1. Download either APK variant to your Android phone.
+2. Open your device's **Files / Downloads** app and tap the downloaded `.apk` file.
+3. If prompted, grant permission to **"Allow from this source"** or **"Install unknown apps"** in your device Settings.
+4. Tap **Install** and launch Decibel.
+
+> **Tip (Fast ADB Install via Terminal):**
+> ```bash
+> adb install Decibel-v1.0.0-arm64-v8a.apk
+> ```
+
+---
+
+## 🔍 How to View & Inspect the APK Internals
+
+If you want to view, analyze, or reverse-engineer the APK package directly:
+
+* **Android Studio APK Analyzer** *(Recommended)*:
+  1. Open Android Studio.
+  2. Navigate to **Build > Analyze APK...** (or drag and drop the `.apk` directly into Android Studio).
+  3. View raw dex files, resource tables, AndroidManifest.xml, certificate fingerprints, and uncompressed component sizes.
+* **JADX GUI (Decompiler)**:
+  - Download [JADX-GUI](https://github.com/skylot/jadx/releases) and open the APK to browse Kotlin/Java source code and XML assets.
+* **Command Line Inspection (Apktool / Zip)**:
+  ```bash
+  # Extract resources and decompiled Smali code
+  apktool d Decibel-v1.0.0-arm64-v8a.apk -o DecibelExtracted
+
+  # Or unzip raw assets directly (APKs are zip archives)
+  unzip -l Decibel-v1.0.0-arm64-v8a.apk
+  ```
+
+---
+
+## 🔨 Building APK from Source
+
+To compile the Android APK directly on your machine:
+
+```bash
+# Clone the repository with submodules
+git clone --recursive https://github.com/Darshan8610/Decibel.git
+cd Decibel
+
+# Build debug APK
+./gradlew :androidApp:assembleDebug
+
+# Build release APK
+./gradlew :androidApp:assembleRelease
+```
+
+The output APKs will be generated in:
+`androidApp/build/outputs/apk/debug/` or `androidApp/build/outputs/apk/release/`
+
+---
+
 ## 🛠 Tech Stack & Architecture
 
 Decibel is built with modern Kotlin Multiplatform & Android best practices:
