@@ -602,7 +602,7 @@ class Ytmusic {
         }
 
     suspend fun checkForFdroidUpdate() =
-        httpClient.get("https://f-droid.org/api/v1/packages/com.maxrave.decibel") {
+        httpClient.get("https://f-droid.org/api/v1/packages/com.decibel.music") {
             contentType(ContentType.Application.Json)
         }
 

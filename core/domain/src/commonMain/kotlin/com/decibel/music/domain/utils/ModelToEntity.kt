@@ -433,7 +433,7 @@ fun Lyrics.toSyncedLyrics(): Lyrics {
         error = this.error,
         lines = syncedLines,
         syncType = "LINE_SYNCED",
-        simpMusicLyrics = this.simpMusicLyrics,
+        decibelLyrics = this.decibelLyrics,
     )
 }
 

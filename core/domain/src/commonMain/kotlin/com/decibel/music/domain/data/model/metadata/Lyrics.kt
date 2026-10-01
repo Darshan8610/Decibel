@@ -7,7 +7,7 @@ data class Lyrics(
     val error: Boolean = false,
     val lines: List<Line>?,
     val syncType: String?,
-    val simpMusicLyrics: DecibelLyrics? = null,
+    val decibelLyrics: DecibelLyrics? = null,
 )
 
 @Serializable

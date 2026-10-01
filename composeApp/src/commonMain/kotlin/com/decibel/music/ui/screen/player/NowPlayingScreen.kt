@@ -734,16 +734,16 @@ fun NowPlayingScreenContent(
     // Vote Dialog
     if (showVoteDialog) {
         val canVoteLyrics =
-            screenDataState.lyricsData?.lyricsProvider == LyricsProvider.SIMPMUSIC &&
+            screenDataState.lyricsData?.lyricsProvider == LyricsProvider.DECIBEL &&
                 screenDataState.lyricsData
                     ?.lyrics
-                    ?.simpMusicLyrics != null
+                    ?.decibelLyrics != null
         val canVoteTranslatedLyrics =
-            screenDataState.lyricsData?.translatedLyrics?.second == LyricsProvider.SIMPMUSIC &&
+            screenDataState.lyricsData?.translatedLyrics?.second == LyricsProvider.DECIBEL &&
                 screenDataState.lyricsData
                     ?.translatedLyrics
                     ?.first
-                    ?.simpMusicLyrics != null
+                    ?.decibelLyrics != null
 
         VoteLyricsDialog(
             canVoteLyrics = canVoteLyrics,
@@ -2208,16 +2208,16 @@ fun NowPlayingScreenContent(
                                         Spacer(modifier = Modifier.weight(1f))
                                         // Vote button - only show if lyrics or translated lyrics from Decibel
                                         val canVoteLyrics =
-                                            screenDataState.lyricsData?.lyricsProvider == LyricsProvider.SIMPMUSIC &&
+                                            screenDataState.lyricsData?.lyricsProvider == LyricsProvider.DECIBEL &&
                                                 screenDataState.lyricsData
                                                     ?.lyrics
-                                                    ?.simpMusicLyrics != null
+                                                    ?.decibelLyrics != null
                                         val canVoteTranslatedLyrics =
-                                            screenDataState.lyricsData?.translatedLyrics?.second == LyricsProvider.SIMPMUSIC &&
+                                            screenDataState.lyricsData?.translatedLyrics?.second == LyricsProvider.DECIBEL &&
                                                 screenDataState.lyricsData
                                                     ?.translatedLyrics
                                                     ?.first
-                                                    ?.simpMusicLyrics != null
+                                                    ?.decibelLyrics != null
                                         if (canVoteLyrics || canVoteTranslatedLyrics) {
                                             CompositionLocalProvider(LocalMinimumInteractiveComponentSize provides Dp.Unspecified) {
                                                 IconButton(
@@ -2287,7 +2287,7 @@ fun NowPlayingScreenContent(
                                         Text(
                                             text =
                                                 when (screenDataState.lyricsData?.lyricsProvider) {
-                                                    LyricsProvider.SIMPMUSIC -> {
+                                                    LyricsProvider.DECIBEL -> {
                                                         stringResource(Res.string.lyrics_provider_decibel)
                                                     }
 

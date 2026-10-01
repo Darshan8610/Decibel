@@ -524,7 +524,7 @@ class MpvPlayerAdapter(
             // Bounds check MUST run inside the launch, on the same player thread/queue as removeAt.
             // If it sits outside (on the caller thread), another queued op (clearMediaItems/setMediaItem)
             // can empty the playlist between the check and removeAt → IndexOutOfBounds (issue #2156 /
-            // SIMPMUSIC-DESKTOP-3Y: "Index 0 out of bounds for length 0").
+            // DECIBEL-DESKTOP-3Y: "Index 0 out of bounds for length 0").
             if (index !in playlist.indices) return@launch
             val track = playlist.removeAt(index)
 

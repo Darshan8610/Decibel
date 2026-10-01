@@ -12,7 +12,7 @@ import com.decibel.music.domain.data.model.streams.YouTubeWatchEndpoint
 import com.decibel.music.domain.manager.DataStoreManager
 import com.decibel.music.domain.manager.DataStoreManager.Values.BETTER_LYRICS
 import com.decibel.music.domain.manager.DataStoreManager.Values.LRCLIB
-import com.decibel.music.domain.manager.DataStoreManager.Values.SIMPMUSIC
+import com.decibel.music.domain.manager.DataStoreManager.Values.DECIBEL
 import com.decibel.music.domain.manager.DataStoreManager.Values.YOUTUBE
 import com.decibel.music.domain.mediaservice.handler.DownloadHandler
 import com.decibel.music.domain.mediaservice.handler.PlaylistType
@@ -64,7 +64,7 @@ class NowPlayingBottomSheetViewModel(
             NowPlayingBottomSheetUIState(
                 listLocalPlaylist = emptyList(),
                 listYouTubePlaylist = emptyList(),
-                mainLyricsProvider = SIMPMUSIC,
+                mainLyricsProvider = DECIBEL,
                 sleepTimer =
                     SleepTimerState(
                         false,
@@ -107,8 +107,8 @@ class NowPlayingBottomSheetViewModel(
                 launch {
                     dataStoreManager.lyricsProvider.collectLatest { lyricsProvider ->
                         when (lyricsProvider) {
-                            SIMPMUSIC -> {
-                                _uiState.update { it.copy(mainLyricsProvider = SIMPMUSIC) }
+                            DECIBEL -> {
+                                _uiState.update { it.copy(mainLyricsProvider = DECIBEL) }
                             }
 
                             YOUTUBE -> {
@@ -336,7 +336,7 @@ class NowPlayingBottomSheetViewModel(
                 }
 
                 is NowPlayingBottomSheetUIEvent.ChangeLyricsProvider -> {
-                    if (listOf(SIMPMUSIC, YOUTUBE, LRCLIB, BETTER_LYRICS).contains(ev.lyricsProvider)) {
+                    if (listOf(DECIBEL, YOUTUBE, LRCLIB, BETTER_LYRICS).contains(ev.lyricsProvider)) {
                         dataStoreManager.setLyricsProvider(ev.lyricsProvider)
                     } else {
                         return@launch

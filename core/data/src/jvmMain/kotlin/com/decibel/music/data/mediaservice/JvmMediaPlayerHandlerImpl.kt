@@ -141,7 +141,7 @@ class JvmMediaPlayerHandlerImpl(
         } else {
             Platform.Linux(
                 "Decibel",
-                "com.maxrave.decibel",
+                "com.decibel.music",
             )
         }
     }

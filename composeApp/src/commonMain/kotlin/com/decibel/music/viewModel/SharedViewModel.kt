@@ -1015,7 +1015,7 @@ class SharedViewModel(
         duration: Int, // 0 if translated lyrics
         inputLyrics: Lyrics?,
         isTranslatedLyrics: Boolean,
-        lyricsProvider: LyricsProvider = LyricsProvider.SIMPMUSIC,
+        lyricsProvider: LyricsProvider = LyricsProvider.DECIBEL,
     ) {
         if (inputLyrics == null) {
             _nowPlayingScreenData.update {
@@ -1107,12 +1107,12 @@ class SharedViewModel(
                             dataStoreManager.translationLanguage.first(),
                         )
                         log("Removed out-of-sync translated lyrics for $videoId")
-                        val simpMusicLyricsId = lyrics.simpMusicLyrics?.id
-                        if (lyricsProvider == LyricsProvider.SIMPMUSIC && !simpMusicLyricsId.isNullOrEmpty()) {
+                        val decibelLyricsId = lyrics.decibelLyrics?.id
+                        if (lyricsProvider == LyricsProvider.DECIBEL && !decibelLyricsId.isNullOrEmpty()) {
                             viewModelScope.launch {
                                 lyricsCanvasRepository
                                     .voteDecibelTranslatedLyrics(
-                                        translatedLyricsId = simpMusicLyricsId,
+                                        translatedLyricsId = decibelLyricsId,
                                         false,
                                     ).collectLatest {
                                         when (it) {
@@ -1143,16 +1143,16 @@ class SharedViewModel(
             runBlocking {
                 dataStoreManager.helpBuildLyricsDatabase.first() == TRUE
             } &&
-                lyricsProvider != LyricsProvider.SIMPMUSIC
+                lyricsProvider != LyricsProvider.DECIBEL
         if (_nowPlayingState.value?.songEntity?.videoId == videoId) {
             val track = _nowPlayingState.value?.track
             when (isTranslatedLyrics) {
                 true -> {
-                    if (lyricsProvider == LyricsProvider.SIMPMUSIC) {
+                    if (lyricsProvider == LyricsProvider.DECIBEL) {
                         _translatedVoteState.value =
                             VoteData(
-                                id = lyrics.simpMusicLyrics?.id ?: "",
-                                vote = lyrics.simpMusicLyrics?.vote ?: 0,
+                                id = lyrics.decibelLyrics?.id ?: "",
+                                vote = lyrics.decibelLyrics?.vote ?: 0,
                                 state = VoteState.Idle,
                             )
                     }
@@ -1188,11 +1188,11 @@ class SharedViewModel(
                 }
 
                 false -> {
-                    if (lyricsProvider == LyricsProvider.SIMPMUSIC) {
+                    if (lyricsProvider == LyricsProvider.DECIBEL) {
                         _lyricsVoteState.value =
                             VoteData(
-                                id = lyrics.simpMusicLyrics?.id ?: "",
-                                vote = lyrics.simpMusicLyrics?.vote ?: 0,
+                                id = lyrics.decibelLyrics?.id ?: "",
+                                vote = lyrics.decibelLyrics?.vote ?: 0,
                                 state = VoteState.Idle,
                             )
                     }
@@ -1268,7 +1268,7 @@ class SharedViewModel(
             resetLyricsVoteState()
             val lyricsProvider = dataStoreManager.lyricsProvider.first()
             when (lyricsProvider) {
-                DataStoreManager.SIMPMUSIC -> {
+                DataStoreManager.DECIBEL -> {
                     getDecibelLyrics(
                         videoId,
                         song,
@@ -1321,7 +1321,7 @@ class SharedViewModel(
                     duration,
                     data,
                     false,
-                    LyricsProvider.SIMPMUSIC,
+                    LyricsProvider.DECIBEL,
                 )
                 insertLyrics(
                     data.toLyricsEntity(videoId),
@@ -1505,11 +1505,11 @@ class SharedViewModel(
                     // convert to LINE_SYNCED, downvote, and fallback to AI translation
                     if (data.syncType == "RICH_SYNCED") {
                         Logger.w(tag, "Decibel translated lyrics are RICH_SYNCED, downvoting and falling back to AI")
-                        val simpMusicLyricsId = data.simpMusicLyrics?.id
-                        if (!simpMusicLyricsId.isNullOrEmpty()) {
+                        val decibelLyricsId = data.decibelLyrics?.id
+                        if (!decibelLyricsId.isNullOrEmpty()) {
                             viewModelScope.launch {
                                 lyricsCanvasRepository
-                                    .voteDecibelTranslatedLyrics(simpMusicLyricsId, false)
+                                    .voteDecibelTranslatedLyrics(decibelLyricsId, false)
                                     .collectLatest { voteResult ->
                                         when (voteResult) {
                                             is Resource.Error -> Logger.w(tag, "Downvote RICH_SYNCED translated lyrics error: ${voteResult.message}")
@@ -1527,7 +1527,7 @@ class SharedViewModel(
                             0,
                             data,
                             true,
-                            LyricsProvider.SIMPMUSIC,
+                            LyricsProvider.DECIBEL,
                         )
                     }
                 }
@@ -1849,9 +1849,9 @@ class SharedViewModel(
     fun voteLyrics(upvote: Boolean) {
         val lyricsData = _nowPlayingScreenData.value.lyricsData
         val lyricsProvider = lyricsData?.lyricsProvider
-        val simpMusicLyricsId = lyricsData?.lyrics?.simpMusicLyrics?.id ?: return
+        val decibelLyricsId = lyricsData?.lyrics?.decibelLyrics?.id ?: return
 
-        if (lyricsProvider != LyricsProvider.SIMPMUSIC || simpMusicLyricsId.isEmpty()) {
+        if (lyricsProvider != LyricsProvider.DECIBEL || decibelLyricsId.isEmpty()) {
             Logger.w(tag, "Cannot vote: not a Decibel lyrics or missing ID")
             return
         }
@@ -1864,7 +1864,7 @@ class SharedViewModel(
             }
             lyricsCanvasRepository
                 .voteDecibelLyrics(
-                    lyricsId = simpMusicLyricsId,
+                    lyricsId = decibelLyricsId,
                     upvote = upvote,
                 ).collectLatest { result ->
                     when (result) {
@@ -1904,9 +1904,9 @@ class SharedViewModel(
     fun voteTranslatedLyrics(upvote: Boolean) {
         val translatedLyrics = _nowPlayingScreenData.value.lyricsData?.translatedLyrics
         val lyricsProvider = translatedLyrics?.second
-        val simpMusicLyricsId = translatedLyrics?.first?.simpMusicLyrics?.id ?: return
+        val decibelLyricsId = translatedLyrics?.first?.decibelLyrics?.id ?: return
 
-        if (lyricsProvider != LyricsProvider.SIMPMUSIC || simpMusicLyricsId.isEmpty()) {
+        if (lyricsProvider != LyricsProvider.DECIBEL || decibelLyricsId.isEmpty()) {
             Logger.w(tag, "Cannot vote: not a Decibel translated lyrics or missing ID")
             return
         }
@@ -1919,7 +1919,7 @@ class SharedViewModel(
             }
             lyricsCanvasRepository
                 .voteDecibelTranslatedLyrics(
-                    translatedLyricsId = simpMusicLyricsId,
+                    translatedLyricsId = decibelLyricsId,
                     upvote = upvote,
                 ).collectLatest { result ->
                     when (result) {
@@ -1990,7 +1990,7 @@ sealed class UIEvent {
 }
 
 enum class LyricsProvider {
-    SIMPMUSIC,
+    DECIBEL,
     YOUTUBE,
     SPOTIFY,
     LRCLIB,

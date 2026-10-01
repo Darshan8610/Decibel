@@ -39,4 +39,4 @@
 
 -keep class com.decibel.music.lyrics.parser.** { *; }
 -keep class com.decibel.music.lyrics.models.** { *; }
--keep class com.simpmusic.lyrics.parser.** { *; }
+-keep class com.decibel.music.lyrics.parser.** { *; }

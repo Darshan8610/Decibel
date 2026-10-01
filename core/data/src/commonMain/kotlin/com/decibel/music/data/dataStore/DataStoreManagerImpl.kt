@@ -21,7 +21,7 @@ import com.decibel.music.domain.manager.DataStoreManager.Values.PROXY_TYPE_SOCKS
 import com.decibel.music.domain.manager.DataStoreManager.Values.REPEAT_ALL
 import com.decibel.music.domain.manager.DataStoreManager.Values.REPEAT_MODE_OFF
 import com.decibel.music.domain.manager.DataStoreManager.Values.REPEAT_ONE
-import com.decibel.music.domain.manager.DataStoreManager.Values.SIMPMUSIC
+import com.decibel.music.domain.manager.DataStoreManager.Values.DECIBEL
 import com.decibel.music.domain.manager.DataStoreManager.Values.TRUE
 import com.decibel.music.logger.Logger
 import kotlinx.coroutines.Dispatchers
@@ -445,7 +445,7 @@ internal class DataStoreManagerImpl(
 
     override val lyricsProvider =
         settingsDataStore.data.map { preferences ->
-            preferences[LYRICS_PROVIDER] ?: SIMPMUSIC
+            preferences[LYRICS_PROVIDER] ?: DECIBEL
         }
 
     override suspend fun setLyricsProvider(provider: String) {

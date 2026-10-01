@@ -407,7 +407,7 @@ interface DataStoreManager {
     }
 
     companion object Values {
-        const val SIMPMUSIC = "decibel"
+        const val DECIBEL = "decibel"
         const val YOUTUBE = "youtube"
         const val LRCLIB = "lrclib"
         const val BETTER_LYRICS = "better_lyrics"
