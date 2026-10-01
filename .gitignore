@@ -1,0 +1,17 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+*/build
+*/.cxx
+*.apk
+*.aab
+captures/
+.externalNativeBuild
+.cxx
+desktopApp/build/
+desktopApp/conveyor/
+mpv-natives/
+*.log
