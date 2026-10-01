@@ -109,10 +109,10 @@ class MpvPlayer private constructor(
         private val scratch = ThreadLocal.withInitial { Memory(8) }
 
         /** `@label:` of the DJ sweep entry, so `af-command` can retune it mid-fade. */
-        private const val SWEEP_LABEL = "simpDjSweep"
+        private const val SWEEP_LABEL = "decibelDjSweep"
 
         /** `@label:` of the rubberband entry that carries the AutoMix pitch match. */
-        private const val PITCH_LABEL = "simpDjPitch"
+        private const val PITCH_LABEL = "decibelDjPitch"
 
         /**
          * Create and initialize a libmpv handle.
