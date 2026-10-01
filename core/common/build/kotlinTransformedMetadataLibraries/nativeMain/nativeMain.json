@@ -1,0 +1,137 @@
+[
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-datetime"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-datetime"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\nativeMain\\org.jetbrains.kotlinx-kotlinx-datetime-0.8.0-darwinMain-HeEIcg.klib",
+    "sourceSetName": "darwinMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-datetime"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-datetime"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\nativeMain\\org.jetbrains.kotlinx-kotlinx-datetime-0.8.0-tzdbOnFilesystemMain-gspK2g.klib",
+    "sourceSetName": "tzdbOnFilesystemMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-datetime"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-datetime"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\nativeMain\\org.jetbrains.kotlinx-kotlinx-datetime-0.8.0-tzfileMain-gspK2g.klib",
+    "sourceSetName": "tzfileMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-datetime"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-datetime"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\nativeMain\\org.jetbrains.kotlinx-kotlinx-datetime-0.8.0-commonKotlinMain-gspK2g.klib",
+    "sourceSetName": "commonKotlinMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "com.eygraber",
+        "name": "uri-kmp"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "com.eygraber",
+        "name": "uri-kmp"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\nativeMain\\com.eygraber-uri-kmp-0.0.21-appleMain-Ib9MjA.klib",
+    "sourceSetName": "appleMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "co.touchlab",
+        "name": "kermit"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "co.touchlab",
+        "name": "kermit"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\nativeMain\\co.touchlab-kermit-2.1.0-nativeMain-ZPyT3Q.klib",
+    "sourceSetName": "nativeMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-serialization-core"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-serialization-core"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\nativeMain\\org.jetbrains.kotlinx-kotlinx-serialization-core-1.9.0-nativeMain-DVGtaQ.klib",
+    "sourceSetName": "nativeMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "co.touchlab",
+        "name": "kermit-core"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "co.touchlab",
+        "name": "kermit-core"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\nativeMain\\co.touchlab-kermit-core-2.1.0-appleMain-Mv5SxQ.klib",
+    "sourceSetName": "appleMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "co.touchlab",
+        "name": "kermit-core"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "co.touchlab",
+        "name": "kermit-core"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\nativeMain\\co.touchlab-kermit-core-2.1.0-nativeMain-3AHZ4A.klib",
+    "sourceSetName": "nativeMain"
+  }
+]

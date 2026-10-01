@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DomainModelTest[jvm]" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-01T12:57:21.409Z" hostname="DESKTOP-72J703I" time="0.042">
+  <properties/>
+  <testcase name="testLocalPlaylistEntityCreation[jvm]" classname="com.decibel.music.domain.DomainModelTest" time="0.033"/>
+  <testcase name="testGenericMediaItem[jvm]" classname="com.decibel.music.domain.DomainModelTest" time="0.002"/>
+  <testcase name="testSongEntityCreation[jvm]" classname="com.decibel.music.domain.DomainModelTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

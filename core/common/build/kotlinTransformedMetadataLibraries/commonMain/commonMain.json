@@ -1,0 +1,92 @@
+[
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-datetime"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-datetime"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-kotlinx-datetime-0.8.0-commonMain-gspK2g.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "com.eygraber",
+        "name": "uri-kmp"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "com.eygraber",
+        "name": "uri-kmp"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\commonMain\\com.eygraber-uri-kmp-0.0.21-commonMain-c_wI1Q.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "org.jetbrains.kotlin",
+        "name": "kotlin-stdlib"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "org.jetbrains.kotlin",
+        "name": "kotlin-stdlib"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlin-kotlin-stdlib-2.4.10-commonMain-pEpArg.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "co.touchlab",
+        "name": "kermit"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "co.touchlab",
+        "name": "kermit"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\commonMain\\co.touchlab-kermit-2.1.0-commonMain-ZPyT3Q.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-serialization-core"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "org.jetbrains.kotlinx",
+        "name": "kotlinx-serialization-core"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-kotlinx-serialization-core-1.9.0-commonMain-DVGtaQ.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": {
+      "groupAndName": {
+        "group": "co.touchlab",
+        "name": "kermit-core"
+      },
+      "componentId": {
+        "type": "module",
+        "group": "co.touchlab",
+        "name": "kermit-core"
+      }
+    },
+    "file": "D:\\new decibel\\core\\common\\build\\kotlinTransformedMetadataLibraries\\commonMain\\co.touchlab-kermit-core-2.1.0-commonMain-3AHZ4A.klib",
+    "sourceSetName": "commonMain"
+  }
+]
