@@ -38,7 +38,7 @@ class DecibelLyrics {
             httpClient = createClient()
         }
 
-    private val baseUrl = "https://api-lyrics.simpmusic.org/v1/"
+    private val baseUrl = DecibelLyricsEndpoints.BASE_URL
 
     private val amTokenManager = AMTokenManager()
 
@@ -73,7 +73,7 @@ class DecibelLyrics {
                 deflate(0.8F)
             }
             defaultRequest {
-                url("https://api-lyrics.simpmusic.org/v1")
+                url(DecibelLyricsEndpoints.BASE_URL_ALT)
             }
             if (proxy != null) {
                 engine {

@@ -23,7 +23,7 @@ private const val TAG = "DecibelLyricsClient"
 class DecibelLyricsClient {
     private val algorithm = ""
 
-    private val hmacService = Hmac("HmacSHA256", "simpmusic-lyrics")
+    private val hmacService = Hmac("HmacSHA256", DecibelLyricsEndpoints.HMAC_KEY)
     private val lyricsService = DecibelLyrics()
     private var insertingLyrics: Pair<String?, Boolean> = (null to false)
     private val isInsertingLyrics: Boolean
