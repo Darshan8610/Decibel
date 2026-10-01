@@ -915,7 +915,10 @@ afterEvaluate {
 }
 
 tasks.withType<Test>().configureEach {
-    systemProperty("user.home", rootProject.file(".userprofile").absolutePath)
-    systemProperty("robolectric.offline", "true")
-    systemProperty("robolectric.dependency.dir", rootProject.file(".userprofile/robolectric-jars").absolutePath)
+    val roboJars = rootProject.file(".userprofile/robolectric-jars")
+    if (roboJars.isDirectory && (roboJars.list()?.isNotEmpty() == true)) {
+        systemProperty("user.home", rootProject.file(".userprofile").absolutePath)
+        systemProperty("robolectric.offline", "true")
+        systemProperty("robolectric.dependency.dir", roboJars.absolutePath)
+    }
 }
