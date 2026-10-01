@@ -1,0 +1,13 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\new decibel\core\data\src\androidMain\AndroidManifest.xml:2:1-3:12
+INJECTED from D:\new decibel\core\data\src\androidMain\AndroidManifest.xml:2:1-3:12
+	package
+		INJECTED from D:\new decibel\core\data\src\androidMain\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\new decibel\core\data\src\androidMain\AndroidManifest.xml:2:11-69
+uses-sdk
+INJECTED from D:\new decibel\core\data\src\androidMain\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\new decibel\core\data\src\androidMain\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\new decibel\core\data\src\androidMain\AndroidManifest.xml

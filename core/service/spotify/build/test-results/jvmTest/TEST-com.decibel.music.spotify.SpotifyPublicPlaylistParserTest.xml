@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SpotifyPublicPlaylistParserTest[jvm]" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-01T13:02:48.905Z" hostname="DESKTOP-72J703I" time="0.048">
+  <properties/>
+  <testcase name="acceptsScriptTagWithDifferentAttributeOrder[jvm]" classname="com.decibel.music.spotify.SpotifyPublicPlaylistParserTest" time="0.024"/>
+  <testcase name="failsClearlyWhenPayloadIsNotJson[jvm]" classname="com.decibel.music.spotify.SpotifyPublicPlaylistParserTest" time="0.019"/>
+  <testcase name="toleratesMissingCoverArtAndUnknownFields[jvm]" classname="com.decibel.music.spotify.SpotifyPublicPlaylistParserTest" time="0.0"/>
+  <testcase name="failsClearlyWhenTrackListEmpty[jvm]" classname="com.decibel.music.spotify.SpotifyPublicPlaylistParserTest" time="0.0"/>
+  <testcase name="parsesRealisticPayloadWithEpisodesAndStringDurations[jvm]" classname="com.decibel.music.spotify.SpotifyPublicPlaylistParserTest" time="0.001"/>
+  <testcase name="failsClearlyWhenEntityIsNotAPlaylist[jvm]" classname="com.decibel.music.spotify.SpotifyPublicPlaylistParserTest" time="0.002"/>
+  <testcase name="failsClearlyWhenNextDataMissing[jvm]" classname="com.decibel.music.spotify.SpotifyPublicPlaylistParserTest" time="0.001"/>
+  <testcase name="fallsBackToSearchingForPlaylistShapeAtUnknownNesting[jvm]" classname="com.decibel.music.spotify.SpotifyPublicPlaylistParserTest" time="0.0"/>
+  <testcase name="skipsEntriesWithoutTitleAndDefaultsNameWhenMissing[jvm]" classname="com.decibel.music.spotify.SpotifyPublicPlaylistParserTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

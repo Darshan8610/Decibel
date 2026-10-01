@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SpotifyTrackQueryTest[jvm]" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-01T13:02:48.955Z" hostname="DESKTOP-72J703I" time="0.003">
+  <properties/>
+  <testcase name="stripsTrailingFromAnnotation[jvm]" classname="com.decibel.music.spotify.SpotifyTrackQueryTest" time="0.001"/>
+  <testcase name="omitsBlankTitle[jvm]" classname="com.decibel.music.spotify.SpotifyTrackQueryTest" time="0.0"/>
+  <testcase name="collapsesLeftoverWhitespace[jvm]" classname="com.decibel.music.spotify.SpotifyTrackQueryTest" time="0.0"/>
+  <testcase name="joinsCleanTitleAndArtists[jvm]" classname="com.decibel.music.spotify.SpotifyTrackQueryTest" time="0.0"/>
+  <testcase name="returnsBlankWhenBothPartsBlank[jvm]" classname="com.decibel.music.spotify.SpotifyTrackQueryTest" time="0.0"/>
+  <testcase name="stripsParenthesisedFromAnnotation[jvm]" classname="com.decibel.music.spotify.SpotifyTrackQueryTest" time="0.001"/>
+  <testcase name="omitsBlankArtistText[jvm]" classname="com.decibel.music.spotify.SpotifyTrackQueryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
