@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Decibel Music</title>
+    <style>
+        :root {
+            --primary: #6200ee;
+            --bg: #0f111a;
+            --card-bg: #1a1d2d;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #bb86fc;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+            padding: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .badge {
+            font-size: 0.9rem;
+            background: rgba(187, 134, 252, 0.2);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 999px;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+        h2 {
+            border-bottom: 1px solid #2d3748;
+            padding-bottom: 8px;
+            margin-top: 32px;
+            color: var(--accent);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        p, li {
+            color: var(--text-muted);
+        }
+        strong {
+            color: #ffffff;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Decibel - Music & Audio Streaming</h1>
+        <div class="badge">Privacy Policy &bull; Last Updated: October 2026</div>
+
+        <p>This Privacy Policy explains how <strong>Decibel</strong> ("we", "our", or "the app") handles user information, device permissions, and data security when you use our Android application.</p>
+
+        <h2>1. Information We Collect and How We Use It</h2>
+        <p>Decibel is designed to give you a private, seamless music playback experience. We do not collect, sell, or rent your personal identity data.</p>
+        <ul>
+            <li><strong>Audio & Media Files:</strong> The app accesses audio files stored locally on your device solely to display, organize, and play your music library. Media files never leave your device.</li>
+            <li><strong>Streaming & Caching Data:</strong> When streaming or caching online audio, requests are routed directly to content providers or public APIs. Cached music files remain stored locally on your device storage.</li>
+            <li><strong>Crash & Performance Diagnostics:</strong> To improve app stability and resolve runtime crashes, anonymized diagnostics may be collected via Sentry (if enabled). These reports contain only device architecture and stack traces, with zero personally identifiable data.</li>
+        </ul>
+
+        <h2>2. Android Permissions Used</h2>
+        <p>Decibel requests permissions only when essential for core functionality:</p>
+        <ul>
+            <li><strong>FOREGROUND_SERVICE_MEDIA_PLAYBACK:</strong> Required to play audio continuously in the background while you switch apps or lock your screen.</li>
+            <li><strong>FOREGROUND_SERVICE_DATA_SYNC:</strong> Used when downloading or caching tracks for offline playback.</li>
+            <li><strong>READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE:</strong> Required to scan and index local audio tracks on your device.</li>
+            <li><strong>POST_NOTIFICATIONS:</strong> Displays current track information and playback controls (Play, Pause, Next, Previous) in the system notification drawer.</li>
+            <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Needed to stream music, fetch album artwork, retrieve lyrics, and check network status.</li>
+            <li><strong>WAKE_LOCK & RECEIVE_BOOT_COMPLETED:</strong> Ensures seamless audio playback transitions and persistent settings.</li>
+        </ul>
+
+        <h2>3. Third-Party Services</h2>
+        <p>Decibel may connect with the following third-party services:</p>
+        <ul>
+            <li><strong>YouTube Music / Public Streaming Endpoints:</strong> Used to stream public music streams and fetch metadata.</li>
+            <li><strong>Last.fm (Optional):</strong> If you choose to log in with your Last.fm account, authentication is performed via official OAuth callback for scrobbling your tracks.</li>
+            <li><strong>Sentry:</strong> For anonymized crash reporting and stability improvements.</li>
+        </ul>
+
+        <h2>4. Data Retention and Security</h2>
+        <p>All user preferences, playlists, and cached tracks are stored locally on your device within the app's sandboxed storage. We do not host central user databases or track user browsing behavior across websites.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Decibel is not directed to children under the age of 13. We do not knowingly collect personal information from children.</p>
+
+        <h2>6. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be published on this page.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions or suggestions regarding this Privacy Policy, please reach out to us via GitHub at: <a href="https://github.com/Darshan8610/Decibel" target="_blank">https://github.com/Darshan8610/Decibel</a></p>
+
+        <footer>
+            &copy; 2026 Decibel. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

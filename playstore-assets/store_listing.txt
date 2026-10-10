@@ -1,0 +1,65 @@
+================================================================================
+GOOGLE PLAY STORE LISTING DETAILS FOR DECIBEL
+================================================================================
+
+1. APP DETAILS
+--------------
+App Name (max 30 characters):
+Decibel - Music Streaming
+
+Short Description (max 80 characters):
+Modern music streaming and playback with rich audio features, themes & lyrics.
+
+Full Description (max 4000 characters):
+Experience music like never before with Decibel – your all-in-one modern music player and streaming companion designed with sleek Material You aesthetics and powerful audio performance.
+
+Whether streaming your favorite tracks online or enjoying your offline library, Decibel delivers crystal-clear sound, real-time synced lyrics, and seamless playback across all your devices.
+
+🎵 KEY FEATURES:
+
+• Online Streaming & Search:
+  Discover millions of songs, albums, and playlists with instant high-quality streaming and intelligent recommendations.
+
+• Synced Word-by-Word Lyrics:
+  Sing along effortlessly with real-time synchronized lyrics for thousands of songs.
+
+• Advanced Audio Engine & Equalizer:
+  Fine-tune your acoustic experience with a multi-band equalizer, bass booster, 3D audio virtualizer, and volume preamp.
+
+• Android Auto Support:
+  Take your music on the road safely with official Android Auto media templates and intuitive in-car controls.
+
+• Offline Caching & Local Music:
+  Listen anywhere, anytime. Seamlessly manage and play local MP3, FLAC, AAC, and WAV files with automatic metadata and album art extraction.
+
+• Material You Theming:
+  Enjoy dynamic theming that adapts to your album artwork or system wallpaper with pure Dark Mode support.
+
+• Smart Sleep Timer & Queue Management:
+  Fall asleep to your favorite soothing tunes with a customizable sleep timer, drag-and-drop queue management, and playlist curation.
+
+• Privacy-First & Lightweight:
+  No invasive tracking, no ads during playback, and designed with minimal battery and memory overhead.
+
+Elevate your audio journey today with Decibel!
+
+--------------------------------------------------------------------------------
+2. CATEGORIZATION & CONTACT DETAILS
+--------------------------------------------------------------------------------
+• Category: Music & Audio
+• Tags: Music, Streaming, Audio Player, Music & Audio, Equalizer
+• Target Audience: 13 and older (or All Ages)
+• Privacy Policy URL:
+  https://darshan8610.github.io/Decibel/privacy-policy.html
+• Developer Contact Email: (Your Google Play Developer Email)
+
+--------------------------------------------------------------------------------
+3. GRAPHICS ASSETS (Already Prepared in playstore-assets/)
+--------------------------------------------------------------------------------
+• App Icon (512x512 PNG): playstore-assets/app_icon_512x512.png
+• Feature Graphic (1024x500 PNG): playstore-assets/feature_graphic_1024x500.png
+• Phone Screenshots:
+  - playstore-assets/screenshot_1_streaming.png
+  - playstore-assets/screenshot_2_lyrics.png
+  - playstore-assets/screenshot_3_audio.png
+  - playstore-assets/screenshot_4_auto.png

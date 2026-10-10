@@ -2643,4 +2643,5 @@ fun NowPlayingScreenContent(
                 }
             }
         }
-    
+    }
+}

@@ -81,22 +81,36 @@ android {
         }
     }
 
+    val keystorePropsFile = rootProject.file("keystore.properties")
+    val keystoreProps = Properties().apply {
+        if (keystorePropsFile.exists()) {
+            load(keystorePropsFile.inputStream())
+        }
+    }
+
+    signingConfigs {
+        create("release") {
+            if (keystorePropsFile.exists()) {
+                val storeFilePath = keystoreProps.getProperty("storeFile")
+                if (storeFilePath != null) {
+                    storeFile = rootProject.file(storeFilePath)
+                    storePassword = keystoreProps.getProperty("storePassword")
+                    keyAlias = keystoreProps.getProperty("keyAlias")
+                    keyPassword = keystoreProps.getProperty("keyPassword")
+                }
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
             )
-            splits {
-                abi {
-                    isEnable = true
-                    reset()
-                    isUniversalApk = true
-                    include(*abis)
-                }
-            }
         }
         debug {
             isMinifyEnabled = false

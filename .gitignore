@@ -15,4 +15,10 @@ captures/
 mpv-natives/
 *.log
 .userprofile/
-
+keystore.properties
+*.jks
+*.keystore
+release-key.jks
+release.keystore
+mapping.txt
+**/mapping.txt
